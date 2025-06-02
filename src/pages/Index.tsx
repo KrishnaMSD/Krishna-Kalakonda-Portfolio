@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,8 +11,6 @@ import Navigation from '@/components/Navigation';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-
   const downloadResume = () => {
     console.log('Downloading Resume...');
     // In a real implementation, this would trigger a download
@@ -198,19 +196,9 @@ const Index = () => {
             </Button>
           </div>
 
-          <Button 
-            onClick={() => setIsHireModalOpen(true)}
-            className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-lg px-8 py-3"
-          >
-            Hire Me
-          </Button>
+          <HireModal />
         </div>
       </section>
-
-      <HireModal 
-        isOpen={isHireModalOpen} 
-        onClose={() => setIsHireModalOpen(false)} 
-      />
     </div>
   );
 };
