@@ -12,6 +12,7 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Articles', path: '/articles' },
+    { name: 'Plots', path: '/plots' },
   ];
 
   const featuredProjects = [

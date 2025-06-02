@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Articles from "./pages/Articles";
+import Plots from "./pages/Plots";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/plots" element={<Plots />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
