@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SkillsVisualization from '@/components/SkillsVisualization';
+import SkillsPieChart from '@/components/SkillsPieChart';
 import WorkExperience from '@/components/WorkExperience';
 import Education from '@/components/Education';
 import HireModal from '@/components/HireModal';
@@ -97,6 +98,13 @@ const Index = () => {
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <SkillsVisualization />
+        </div>
+      </section>
+
+      {/* Skills Pie Chart Section */}
+      <section className="py-16 px-6 bg-white/50">
+        <div className="max-w-6xl mx-auto">
+          <SkillsPieChart />
         </div>
       </section>
 
