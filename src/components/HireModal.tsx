@@ -1,18 +1,13 @@
 
 import React, { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-interface HireModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const HireModal = ({ isOpen, onClose }: HireModalProps) => {
+const HireModal = () => {
   const [formData, setFormData] = useState({
     email: '',
     company: '',
@@ -29,7 +24,6 @@ const HireModal = ({ isOpen, onClose }: HireModalProps) => {
       title: "Application Submitted!",
       description: "Thank you for your interest. Krishna will get back to you soon!",
     });
-    onClose();
     setFormData({
       email: '',
       company: '',
@@ -47,7 +41,12 @@ const HireModal = ({ isOpen, onClose }: HireModalProps) => {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+          Hire Me
+        </Button>
+      </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">

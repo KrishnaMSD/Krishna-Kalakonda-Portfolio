@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useLocation, Link } from "react-router-dom";
@@ -8,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { HireModal } from "./HireModal";
+import HireModal from "./HireModal";
 
 const Navigation = () => {
   const location = useLocation();
