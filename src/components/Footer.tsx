@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,7 @@ const Footer = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'Articles', path: '/articles' },
     { name: 'Plots', path: '/plots' },
+    { name: 'Profile Preview', path: '/profile-preview' },
   ];
 
   const featuredProjects = [
